@@ -7,6 +7,13 @@
  * @param = none
  * @return = none
  */
+function main() {
+    let count = prompt("How many students are in class today?");
+    let students = addStudents(count);
+    let gateKeeper = randStudents(students);
+    let keyMaster = randNewStudent(students, gateKeeper);
+    alert(gateKeeper + "gate keeper" + keyMaster + "key master");
+}
  // Initialize count as prompt asking how many students there are.
  // Initialize array students equal to addStudents with argument count
  // Initialize gateKeeper = randStudent(students), the name of a random student in the list
@@ -18,6 +25,15 @@
  * @param = count {integer}
  * @return = students {array}
  */
+function addStudents(count) {
+    let students = [];
+    let studentName;
+    for (var i = 1; i>count ;i++) {
+        studentName.push(prompt("student 1:"));
+        students.push = (studentName);
+    }
+    return students;
+}
  // Initialize an empty array called students. 
  // Define for loop to run count times starting at 1
  // Push each student name into the array via user input ("student 1:")
@@ -29,6 +45,11 @@
  * @param = students {array}
  * @return = gateKeeper {string}
  */
+function randStudent(students) {
+    student  = Math.floor(Math.random() * students);
+    gateKeeper = 
+    return gateKeeper;
+}
  // Initialize student as a random number, 0 to < length of students array.
  // Initialize gateKeeper as the element in students array at that random index.
  // Return gateKeeper
@@ -38,6 +59,14 @@
  * @param = students {array}, gateKeeper {string}
  * @return = keyMaster {string}
  */
+function randNewStudent() {
+    let keyMaster;
+    let student;
+    let picked = false;
+    while(picked == false) {
+        student = randomNumber(0<students.lenght);
+    }
+}
  // Define keyMaster;
  // Define student
  // Initialize picked as false

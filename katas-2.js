@@ -99,7 +99,7 @@
 
 /* Var, Alert, Prompt, Function */
 `
-/* FUNCTION main() 
+//* FUNCTION main() 
  * Facebook wants to check if you're 13, so they ask your birth year 
  * set age = "How old are you?"
  * then set born = asking "What year were you born?"
@@ -209,9 +209,9 @@
 
 /* FUNCTION complementaryColor(color)
  * create a variable called complement, set to ""
- * use a switch function and switch on color
+ * use a switch function and switch on color                                                                    
  * (look at this: https://www.canva.com/colors/color-wheel)
  * in the switch, assign the complementary color to complement
  * @param: color (string)
  * @return: complement (string)
- */
+ */                                                                                   

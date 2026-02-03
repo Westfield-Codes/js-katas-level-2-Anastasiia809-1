@@ -1,80 +1,68 @@
-/* RANDOM STUDENTS KATA:  */
+/* CALCULATOR KATA */
 
-// Who will be gatekeeper and keymaster today?
+/* This is best done with a JS switch control, though can also be a chain of conditionals. */
 
-/* Function Main()
- * Display random gatekeeper name and keymaster name for this kata
- * @param = none
- * @return = none
+/* FUNCTION main() 
+ * Perform basic arithmetic as a calculator
+ * @param: none (main never gets params)
+ * @return: none (main never gets returns)
  */
 function main() {
-    let count = prompt("How many students are in class today?");
-    let students = addStudents(count);
-    let gateKeeper = randStudents(students);
-    let keyMaster = randNewStudent(students, gateKeeper);
-    alert(gateKeeper + "gate keeper" + keyMaster + "key master");
-}
- // Initialize count as prompt asking how many students there are.
- // Initialize array students equal to addStudents with argument count
- // Initialize gateKeeper = randStudent(students), the name of a random student in the list
- // Initialize keyMaster = randNewStudent(students, gateKeeper), name of a different random student
- // Display gatekeeper name and keymaster name for this kata
-
-/* Function addStudents(count) 
- * Enters a set number of students to an array.
- * @param = count {integer}
- * @return = students {array}
- */
-function addStudents(count) {
-    let students = [];
-    let studentName;
-    for (var i = 1; i>count ;i++) {
-        studentName.push(prompt("student 1:"));
-        students.push = (studentName);
+    let operator = prompt("What operation do you want to? (+, -, *, /)");
+    let a = prompt("First number?");
+    let b = prompt("Second number?");
+    parseInt(a);
+    parseInt(b);
+   switch(operator) {
+    case ("+"):
+        add(a,b);
+        break;
+    case ("-"):
+        subtract(a,b);
+        break;
+    case ("*"):
+        multiply(a,b);
+        break;
+    case ("/"):
+        divide(a,b);
+        break;
     }
-    return students;
-}
- // Initialize an empty array called students. 
- // Define for loop to run count times starting at 1
- // Push each student name into the array via user input ("student 1:")
- // End the loop
- // Return the students array
+   }
+    let result = a+b;
+    alert("Equation " +a+b + " = " + result);
+ // Ask the user what operation they want (+, -, *, /)
+ // Ask the user for the first number (a)
+ // Parse a as an integer
+ // Ask the user for the second number (b)
+ // Parse b as an integer
+ // Based on the operation, send the numbers to the right function as arguments 
+ // store the returned value in variable called result
+ // Alert the equation a + operation + b = result
 
-/* Function randStudent(students)
- * This picks a random student from an array. 
- * @param = students {array}
- * @return = gateKeeper {string}
+/* FUNCTION add(a,b)
+ * define a function called add with two number parameters a and b
+ * @param: a, b (integers)
+ * @return: a + b
  */
-function randStudent(students) {
-    student  = Math.floor(Math.random() * students);
-    gateKeeper = 
-    return gateKeeper;
+function add(a,b) {
+    return a + b;
 }
- // Initialize student as a random number, 0 to < length of students array.
- // Initialize gateKeeper as the element in students array at that random index.
- // Return gateKeeper
-
-/* Function randNewStudent(students, gateKeeper) 
- * This picks a student who was not already picked. 
- * @param = students {array}, gateKeeper {string}
- * @return = keyMaster {string}
+/* FUNCTION subtract(a,b)
+ * define a function called subtract with two number parameters a and b
+ * @param: a, b (integers)
+ * @return: a - b
  */
-function randNewStudent() {
-    let keyMaster;
-    let student;
-    let picked = false;
-    while(picked == false) {
-        student = randomNumber(0<students.lenght);
-    }
+function subtract(a,b) {
+    return a - b;
 }
- // Define keyMaster;
- // Define student
- // Initialize picked as false
- // Define loop, run while picked equals false
- // Set student as random index number, 0 to < length of students array.
- // Set keyMaster as element in students array at random index student
- // If keyMaster is not equal to gateKeeper, set picked equal to true
- // End the while loop.
- // Return keyMaster
+/* FUNCTION multiply(a,b)
+ * define a function called multiply with two number parameters a and b
+ * @param: a, b (integers)
+ * @return: a * b (* means multiply)
+ */
 
-
+/* FUNCTION divide(a,b)
+ * define a function called divide with two number parameters a and b
+ * @param: a, b (integers)
+ * @return: a / b (/ means divided by)
+ */

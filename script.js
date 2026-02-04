@@ -8,28 +8,30 @@
  * @return: none (main never gets returns)
  */
 function main() {
+    let result;
     let operator = prompt("What operation do you want to? (+, -, *, /)");
     let a = prompt("First number?");
     let b = prompt("Second number?");
-    parseInt(a);
-    parseInt(b);
+    a = parseInt(a);
+    b = parseInt(b);
    switch(operator) {
     case ("+"):
-        add(a,b);
+        result = add(a,b);
         break;
     case ("-"):
-        subtract(a,b);
+        result = subtract(a,b);
         break;
     case ("*"):
-        multiply(a,b);
+        result = multiply(a,b);
         break;
     case ("/"):
-        divide(a,b);
+        result = divide(a,b);
         break;
+        
     }
+    alert(result);
    }
-    let result = a+b;
-    alert("Equation " +a+b + " = " + result);
+    
  // Ask the user what operation they want (+, -, *, /)
  // Ask the user for the first number (a)
  // Parse a as an integer
@@ -45,7 +47,7 @@ function main() {
  * @return: a + b
  */
 function add(a,b) {
-    return a + b;
+    return  a + b;
 }
 /* FUNCTION subtract(a,b)
  * define a function called subtract with two number parameters a and b
@@ -60,9 +62,14 @@ function subtract(a,b) {
  * @param: a, b (integers)
  * @return: a * b (* means multiply)
  */
-
+function multiply(a,b) {
+    return a * b;;
+}
 /* FUNCTION divide(a,b)
  * define a function called divide with two number parameters a and b
  * @param: a, b (integers)
  * @return: a / b (/ means divided by)
  */
+function divide(a,b) {
+    return a/b;
+}
